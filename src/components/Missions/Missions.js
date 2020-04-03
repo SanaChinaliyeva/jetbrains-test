@@ -1,13 +1,12 @@
 import React, {Component} from 'react';
-import axios from 'axios';
 import Mission from "./Mission/Mission";
-import uuid from 'uuid';
+import {nanoid} from 'nanoid';
 
 class Missions extends Component {
     render () {
         return (
             (this.props.missions).map (mission=> {
-                return <Mission key={uuid()} mission={mission} />
+                return <Mission key={nanoid()} mission={mission} />
             })
         );
     }
